@@ -1,0 +1,220 @@
+<style>
+/* 3 Buttons*/
+.VerticalNav{
+position:fixed;
+right:0px;
+margin-bottom: 0;
+z-index:500;
+top: 550px;
+display: block;
+justify-content: center;
+}
+@media screen and (max-height: 800px) {
+.VerticalNav{
+position:fixed;
+right:0px;
+top: 300px;
+
+}
+}
+@media screen and (max-width: 900px) {
+.VerticalNav{
+display:none;
+}}
+.VerticalNav ul {
+list-style-type: none;
+
+width: 100px;
+}
+
+.VerticalNav li a {
+display: block;
+color: white;
+padding: 15% 16px;
+text-decoration: none;
+
+}
+
+.VerticalNav li i {
+
+color: white !important;}
+
+.VerticalNav li {
+text-align: center;
+margin-bottom:10px;
+background-color:#053396;
+color:black;
+box-shadow: 1px 1px 2px #999;
+height:80px;
+align-items: center;
+}
+.VerticalNav li:first-child a{
+padding: 10% 0;
+}
+.VerticalNav li:first-child, .VerticalNav li:first-child a:hover:not(.active) {
+border-top-left-radius: 10px;
+}
+
+.VerticalNav li:last-child, .VerticalNav li:last-child a:hover:not(.active) {
+border-bottom: none;
+border-bottom-left-radius: 10px;
+}
+
+.VerticalNav li a.active {
+background-color: #435e75;
+color: black;
+
+}
+
+/*.VerticalNav li a:hover:not(.active) {
+background-color: rgba(4, 114, 86, 0.986);
+color: white;
+box-shadow: 2px 2px 4px #999;
+
+}*/
+.VerticalNav li:hover {
+text-align: center;
+margin-bottom:10px;
+background-color: #042469;
+color:black;
+box-shadow: 2px 2px 4px #999;
+height:80px;
+align-items: center;
+}
+
+
+/*Google Translate*/
+
+
+/* Google Translate styles */
+
+.goog-logo-link,
+.goog-te-gadget span,
+div#goog-gt-,
+.goog-te-banner-frame,
+.goog-te-banner-frame.skiptranslate,
+#goog-gt-tt,
+.goog-te-balloon-frame {
+display: none !important;
+}
+
+.goog-text-highlight {
+background: none !important;
+box-shadow: none !important;
+}
+
+#google_translate_element select {
+background: #053396;
+color: white;
+border: none;
+border-radius: 5px;
+padding: 6px 8px;
+border-style: inset;
+border-color: black;
+border-width: 1px;
+z-index: 99999;
+font-size: 18px !important;
+}
+
+#google_translate_element {
+z-index: 100;
+border-radius: 0;
+right: 12ex;
+left: auto;
+position: fixed;
+bottom: 2vh;
+}
+
+.goog-te-gadget {
+color: transparent !important;
+font-size: 0;
+}
+
+.goog-te-gadget-simple {
+background-color: #085C9C !important;
+border-color: @translate-border !important;
+padding: 0.2em !important;
+border-radius: 4px !important;
+font-size: 1rem !important;
+line-height: 2rem !important;
+display: inline-block;
+cursor: pointer;
+}
+
+.goog-te-menu-value {
+display: flex;
+align-items: center;
+color: black !important;
+background-color: @translate-bg !important;
+}
+
+.goog-te-menu-value span {
+color: black;
+font-family: sans-serif;
+}
+
+.goog-te-menu-value span:nth-child(1) {
+position: relative;
+top: 0.07rem;
+}
+
+.goog-te-menu-value span:nth-child(3) {
+border: none !important;
+font-family: 'Material Icons';
+display: flex;
+color: black !important;
+}
+
+.goog-te-menu-value span:nth-child(3):after {
+font-family: 'Material Icons';
+content: "\E5C5";
+font-size: 1.5rem;
+}
+
+.goog-te-menu-value span:nth-child(5) {
+display: none;
+}
+
+.goog-te-menu2 {
+max-width: 100%;
+}
+
+.goog-te-menu-value:before {
+content: "\e894";
+margin-right: 0.5em;
+font-family: 'Material Icons';
+color: black;
+}
+
+.goog-te-gadget-icon {
+display: none;
+}
+
+
+</style>
+
+    
+    <script>
+    var GoogleLanguages = 'af,ga,sq,it,ar,ja,az,kn,eu,ko,bn,la,be,lv,bg,lt,ca,mk,zh-CN,ms,zh-TW,mt,hr,no,cs,fa,da,pl,nl,pt,en,ro,eo,ru,et,sr,tl,sk,fi,sl,fr,es,gl,sw,ka,sv,de,ta,el,te,gu,th,ht,tr,iw,uk,hi,ur,hu,vi,is,cy,id,yi';
+        
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement({
+            pageLanguage: 'en',
+            includedLanguages: GoogleLanguages,
+            layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL
+        }, 'google_translate_element');
+    
+        // Get the language selector element
+        var languageSelector = document.querySelector(".goog-te-combo");
+        
+        // Check if the language selector exists
+        if (languageSelector) {
+            // Set the placeholder text
+            languageSelector.setAttribute("placeholder", "Select Language");
+        }
+    }
+    </script>
+    
+    <div id="google_translate_element"></div>
+    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    
