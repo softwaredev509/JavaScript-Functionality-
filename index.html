@@ -208,6 +208,7 @@
     };
 
     var GoogleLanguages = 'fr,fa,sq,it,ar,ja'; // Only include the languages used in translations object
+    var GoogleLanguage = 'af,ga,sq,it,ar,ja,az,kn,eu,ko,bn,la,be,lv,bg,lt,ca,mk,zh-CN,ms,zh-TW,mt,hr,no,cs,fa,da,pl,nl,pt,en,ro,eo,ru,et,sr,tl,sk,fi,sl,fr,es,gl,sw,ka,sv,de,ta,el,te,gu,th,ht,tr,iw,uk,hi,ur,hu,vi,is,cy,id,yi';
     var index = 0; // Initialize language index
     var languageTextElement = document.getElementById('placeholder');
 
@@ -230,6 +231,6 @@
 
 <script>
     function googleTranslateElementInit() {
-        new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: GoogleLanguages, layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL, autoDisplay: false}, 'google_translate_element');
+        new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: GoogleLanguage, layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL, autoDisplay: false}, 'google_translate_element');
     }
 </script>
